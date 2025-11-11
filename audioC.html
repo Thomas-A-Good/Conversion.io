@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audio Conversions</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="banner">
+            <h1>Audio Conversions</h1>
+        </div>
+        <div class="conversionSelector">   
+            <label for="fileIn"></label>
+            <select class="dropdown" id="fileIn" name="fileIn">
+                <option value="empty" disabled selected></option>
+                <option value="MP3">MP3</option>
+                <option value="WAV">WAV</option>
+                <option value="MP4">MP4</option>
+                <option value="FLAC">FLAC</option>
+            </select>
+            <span class="arrow">→</span>
+            <label for="fileOut"></label>
+            <select class="dropdown" id="fileOut" name="fileOut">
+                <option value="empty" disabled selected></option>
+                <option value="MP3">MP3</option>
+                <option value="WAV">WAV</option>
+                <option value="MP4">MP4</option>
+                <option value="FLAC">FLAC</option>
+            </select>
+        </div>
+        <div class="uploadArea">
+            <label for="myfile" class="uploadBanner">Click or drop file here</label>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" id="myfile" name="myfile" hidden><br><br>
+                <input type="submit" value="Convert">
+            </form>
+        </div>
+    </body>
+
+</html>
